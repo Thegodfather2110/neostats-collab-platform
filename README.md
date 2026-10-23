@@ -57,7 +57,7 @@ npm run dev
 ```
 Open http://localhost:3000.
 
-If login reports an API server error, make sure MySQL is running, the database and `backend/.env` are configured, and the backend is running on port 8000. Verify it at http://127.0.0.1:8000/api/health before signing in. For a backend on a different address, set `API_SERVER_URL` in the frontend environment before starting Next.js.
+If login cannot reach the API, make sure MySQL is running, the database and `backend/.env` are configured, and the backend is running on port 8000. Verify it at http://127.0.0.1:8000/api/health before signing in. The frontend calls the backend directly at `http://127.0.0.1:8000/api`; for a backend on a different address, update `NEXT_PUBLIC_API_URL` in `frontend/.env.local` (for example, `http://127.0.0.1:5000/api`) and restart Next.js.
 
 ## 4. Git setup
 ```bash
